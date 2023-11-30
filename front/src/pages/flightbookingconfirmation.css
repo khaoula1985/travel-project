@@ -1,0 +1,20 @@
+
+.flight-booking-confirmation img{
+    position:absolute;
+    left:900px;
+    top:80px;
+    width: 500px;
+    height:400px;
+
+}
+.flight-booking-confirmation{
+   margin-left: 250px;
+
+}
+
+.flight-booking-confirmation h2{
+    text-align: center;
+    margin-top: -50px;
+    margin-left: -300px;
+    color:#ef8338;
+}

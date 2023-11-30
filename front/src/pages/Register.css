@@ -1,0 +1,36 @@
+.register{
+    margin-top: 135px;
+    margin-left: 250px;
+    border: solid;
+    border-radius: 20px;
+    border-color:  #2b458a;
+    box-sizing: border-box;
+    padding:50px;
+    width:400px;
+    margin-bottom: 40px;
+    height:350px;
+}
+.register h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.email{
+    margin-top:20px;
+}
+.btn-register{
+    padding:5px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left:100px;
+    background-color: #fd9342;
+}
+
+.register-img{
+    width:80px;
+    height:50px;
+    left: 650px;
+    top: 100px;
+    position: absolute;
+
+}

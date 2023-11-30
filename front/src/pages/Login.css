@@ -1,0 +1,36 @@
+.login{
+    margin-top: 100px;
+    margin-left: 500px;
+    border: solid;
+    border-radius: 20px;
+    border-color: #4293e5;
+    box-sizing: border-box;
+    padding:50px;
+    width:400px;
+    margin-bottom: 100px;
+}
+.login h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.btn-login{
+    padding:5px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 120px;
+    background-color: #92c2f9;
+}
+.email{
+    margin-bottom: 20px;
+}
+.email input{
+    margin-left: 30px;
+}
+.login-img img {
+position: absolute;
+top:180px;
+width: 300px;
+height:350px;
+margin-left: 120px;
+}

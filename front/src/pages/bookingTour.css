@@ -1,0 +1,14 @@
+.bookingtour{
+    margin-top: 100px;
+    margin-left: 200px;
+    margin-bottom: 170px;
+
+}
+.bookingtour h1{
+    margin-left: -200px;
+}
+.bookingtour img{
+    width:230px;
+    height: 120px;
+    margin-left: 360px;
+}

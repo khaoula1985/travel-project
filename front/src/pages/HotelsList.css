@@ -1,0 +1,32 @@
+
+.hotel-list {
+    margin-top: 20px;
+  }
+  
+  .card {
+    transition: transform 0.2s;
+    height:300px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-img-top {
+    height: 200px; /* Set the desired height for the card images */
+    object-fit: cover;
+  }
+  
+  .card-title {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .card-text {
+    margin-bottom: 10px;
+  }
+  
+  .btn {
+    margin-top: 10px;
+  }
+  

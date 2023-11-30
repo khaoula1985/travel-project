@@ -1,0 +1,27 @@
+.Fresult{
+    margin-top: 100px;
+}
+.Fresult img{
+position: absolute;
+ top: 80px; 
+ left: 900px;  
+ width:450px;
+}
+
+.flight-search-result{
+border: solid;
+border-radius: 15px;
+width:300px;
+margin-left: 530px;
+padding:5px;
+margin-bottom: 20px;
+
+}
+.flight-search-result span{
+color:#ef8338;
+
+}
+.Fresult h1{
+    text-align: center;
+    color:#ef8338;
+}

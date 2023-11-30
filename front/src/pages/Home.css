@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Styles for the 'home' class */
+.home {
+   
+    font-family: "lato";
+    height:500px;
+  }
+  a {
+    text-decoration: none; /* Remove underlines from all links */
+    color: inherit; /* Inherit the text color */
+  }
+  .home h1{
+    position: absolute;
+    top:60px;
+   font-size: 40px;
+   text-align: center;
+   font-weight: bolder;
+   left: 300px;
+   animation: animate 1.5s linear infinite; 
+
+  }
+  @keyframes animate { 
+    0% { 
+        opacity: 0; 
+    } 
+
+    50% { 
+        opacity: 0.7; 
+    } 
+
+    100% { 
+        opacity: 0; 
+    } 
+} 
+ 
+  .home img{
+    height: 470px;
+    margin-top: 50px;
+  }
+  .home .landing{
+    position: absolute;
+    font-weight: bolder;
+    top: 150px;
+    left: 700px;
+  }
+  .icons img{
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 10px 15px 0 rgb(0 0 0 / 0.1), 0 4px 6px 0 rgb(0 0 0 / 0.1);box-shadow: 0 10px 15px 0 rgb(0 0 0 / 0.1), 0 4px 6px 0 rgb(0 0 0 / 0.1);
+  padding: 5px;
+ }
+ .home .icons{
+  
+  margin-top: -300px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 700px;
+  text-align: center;
+  color:#ef8338;
+  width: 500px;
+ }
+ 
+
+
+ 
