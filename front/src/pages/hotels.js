@@ -229,7 +229,7 @@ const Hotels = () => {
     navigate(`/bookingconfirmation`, {
       state: {
         bookingInfo: {
-          hotelName: hotel.name, // Include hotel name in booking information
+          hotelName: hotel.name, 
           maxPersons: hotel.maxPersons || 0,
           checkInDate: hotel.checkInDate || '',
           checkOutDate: hotel.checkOutDate || '',
