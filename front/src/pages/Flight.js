@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './Flight.css'
 import refreshSound from './../images/call-to-attention.mp3';
+import { RiAdminLine } from "react-icons/ri";
 
 const Flight = () => {
   const [departureAirport, setDepartureAirport] = useState('');
@@ -43,7 +44,33 @@ const Flight = () => {
       navigate('/flight/searchresult', { state: { filteredFlights } });
     }
   };
+    
+  const handleAddFlight = async () => {
+   
+    console.log('Adding a new flight...', newFlight);
+    try {
+      const response = await axios.post('http://localhost:8080/flight', newFlight);
+      console.log('Flight added successfully:', response.data);
 
+    } catch (error) {
+      console.error('Error adding flight:', error.message);
+    }
+  };
+
+  const [newFlight, setNewFlight] = useState({
+    departureAirport: '',
+    arrivalAirport: '',
+    departureDate: '',
+    departureTime: '',
+    airline: '',
+    flightNumber: '', 
+    arrivalTime: '', 
+    price: 0, 
+  });
+  const handleNewFlightChange = (e) => {
+    const { name, value } = e.target;
+    setNewFlight((prevFlight) => ({ ...prevFlight, [name]: value }));
+  };
   return (
     <div className='flight'>
       <h1>
@@ -113,6 +140,123 @@ const Flight = () => {
             Search
           </button>
         </form>
+
+        <div className='add-flight-section'>
+          <h3>Add a New Flight <RiAdminLine/></h3>
+          <form>
+            <div>
+              <label htmlFor='departureAirport'>Departure Airport:</label>
+              <select
+                id='departureAirport'
+                name='departureAirport'
+                style={{ height: '25px' }}
+                value={newFlight.departureAirport}
+                onChange={handleNewFlightChange}
+              >
+                 <option value=''> Departure Airport</option>
+                <option value='TUN'>Tunis-Carthage TUN</option>
+                <option value='PAL'>Alquds-PAL</option>
+                <option value='FCO'>Rome-FCO</option>
+                <option value='BER'>Berlin-BER</option>
+                <option value='BCN'>Barcelone-BCN</option>
+                <option value='LON'>London-LON</option>
+                <option value='CAI'>Caire-CAI</option>
+                <option value='ORY'>Paris-ORY</option>
+                <option value='IST'>Istanbul-IST</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor='arrivalAirport'>Arrival Airport:</label>
+              <select
+                id='arrivalAirport'
+                name='arrivalAirport'
+                style={{ height: '25px' }}
+                value={newFlight.arrivalAirport}
+                onChange={handleNewFlightChange}
+              >
+                   <option value=''>Arrival Airport</option>
+                <option value='TUN'>Tunis-Carthage TUN</option>
+                <option value='PAL'>Alquds-PAL</option>
+                <option value='FCO'>Rome-FCO</option>
+                <option value='BER'>Berlin-BER</option>
+                <option value='BCN'>Barcelone-BCN</option>
+                <option value='LON'>London-LON</option>
+                <option value='CAI'>Caire-CAI</option>
+                <option value='ORY'>Paris-ORY</option>
+                <option value='IST'>Istanbul-IST</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor='departureDate'>Departure Date:</label>
+              <input
+                type='date'
+                id='departureDate'
+                name='departureDate'
+                style={{ height: '25px' }}
+                value={newFlight.departureDate}
+                onChange={handleNewFlightChange}
+              />
+            </div>
+            <div>
+              <label htmlFor='airline'>Airline:</label>
+              <input
+                type='text'
+                id='airline'
+                name='airline'
+                style={{ height: '25px' }}
+                value={newFlight.airline}
+                onChange={handleNewFlightChange}
+              />
+            </div>
+            <div>
+              <label htmlFor='flightNumber'>Flight Number:</label>
+              <input
+                type='text'
+                id='flightNumber'
+                name='flightNumber'
+                style={{ height: '25px' }}
+                value={newFlight.flightNumber}
+                onChange={handleNewFlightChange}
+              />
+            </div>
+            <div>
+              <label htmlFor='departureTime'>Departure Time:</label>
+              <input
+                type='time'
+                id='departureTime'
+                name='departureTime'
+                style={{ height: '25px' }}
+                value={newFlight.departureTime}
+                onChange={handleNewFlightChange}
+              />
+            </div>
+            <div>
+              <label htmlFor='arrivalTime'>Arrival Time:</label>
+              <input
+                type='time'
+                id='arrivalTime'
+                name='arrivalTime'
+                style={{ height: '25px' }}
+                value={newFlight.arrivalTime}
+                onChange={handleNewFlightChange}
+              />
+            </div>
+            <div>
+              <label htmlFor='price'>Price:</label>
+              <input
+                type='number'
+                id='price'
+                name='price'
+                style={{ height: '25px' }}
+                value={newFlight.price}
+                onChange={handleNewFlightChange}
+              />
+            </div>
+            <button type='button' onClick={handleAddFlight}>
+              Add Flight
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );
