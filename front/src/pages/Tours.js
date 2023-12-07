@@ -70,7 +70,9 @@ const Tours = () => {
 
     try {
       
-      await axios.post('http://localhost:8080/tour', formData);
+      await axios.post('http://localhost:8080/tour', formData,{
+        "Content-Type": "multipart/form-data"
+      });
 
       setFile(null);
       setDestination('');

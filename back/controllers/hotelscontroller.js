@@ -1,4 +1,3 @@
-
 const Hotel = require("../models/hotel"); 
 
 // Retrieve all hotels
@@ -29,7 +28,6 @@ module.exports.addhotel = (req, resp) => {
     city,
     address,
     rating,
-    image,
     description,
     rooms
     } = req.body;
@@ -39,7 +37,7 @@ module.exports.addhotel = (req, resp) => {
     city,
     address,
     rating,
-    image,
+    image:req.file.filename,
     description,
     rooms
   });

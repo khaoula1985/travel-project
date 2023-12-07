@@ -36,6 +36,7 @@ mongoose.connection.on('disconnected', () => {
   console.log('MongoDB Disconnected');
 });
 
+app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(cors());
 app.use(Authrouter);

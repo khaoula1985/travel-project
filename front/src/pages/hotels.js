@@ -17,7 +17,7 @@ const HotelList = ({ hotels, handleEdit, handleDelete, isAdmin, handleBook }) =>
         {hotels.map((hotel) => (
           <div key={hotel._id} className="col-md-3 mb-4" style={{ marginLeft: "80px" }}>
             <div className="card">
-              <img src={hotel.image} alt="Hotel Images" className="card-img-top" />
+              <img src={`http://localhost:8080/uploads/${hotel.image}`} alt="Hotel Images" className="card-img-top" />
               <div className="card-body">
                 <h5 className="card-title" style={{ textAlign: "center" }}>{hotel.name}</h5>
                 <p className="card-text">City: {hotel.city}</p>
@@ -229,7 +229,7 @@ const Hotels = () => {
     navigate(`/bookingconfirmation`, {
       state: {
         bookingInfo: {
-          hotelName: hotel.name, 
+          hotelName: hotel.name, // Include hotel name in booking information
           maxPersons: hotel.maxPersons || 0,
           checkInDate: hotel.checkInDate || '',
           checkOutDate: hotel.checkOutDate || '',

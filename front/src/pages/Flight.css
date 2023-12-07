@@ -80,6 +80,11 @@
     border: solid;
     border-radius: 15px;
     padding: 10px;
+    width:694px;
+    margin-left: -10px;
 
 }
-
+.add-flight-section h1{
+    color:#ef8338;
+    margin-Top:-10px;
+}

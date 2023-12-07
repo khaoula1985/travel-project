@@ -20,9 +20,9 @@ module.exports.gettoursbyid = async (req, resp) => {
 };
 
 module.exports.addtour = (req, resp) => {
-    const { image, rating, price, destination, username } = req.body;
+    const { rating, price, destination, username } = req.body;
     const touradd = new Tour({
-        image,
+        image: req.file.filename,
         rating,
         price,
         destination,

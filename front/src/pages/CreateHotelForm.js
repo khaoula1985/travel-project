@@ -78,7 +78,9 @@ const HotelCreateForm = () => {
       formData.append('image', file);
 
       // Send the hotel data to the server
-      await axios.post('http://localhost:8080/hotel', formData);
+      await axios.post('http://localhost:8080/hotel', formData,{
+        "Content-Type": "multipart/form-data"
+      });
 
       // Clear the form fields
       setFile(null);
